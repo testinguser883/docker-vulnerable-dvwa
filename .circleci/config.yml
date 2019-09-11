@@ -42,7 +42,7 @@ jobs:
             (
             docker pull owasp/zap2docker-weekly && \
             docker run -t owasp/zap2docker-weekly zap-full-scan.py \
-                -u https://github.com/ropnop/invoicer/raw/master/zap-baseline.conf \
+                -u https://gist.githubusercontent.com/testinguser883/9938763929f550bac4cfbf7357bea97a/raw/c26caeaf1a8fb5c0c435fbf7ed17fef554fd2831/zap-baseline.conf \
                 -t http://$_ip:80/ || \
             if [ $? -ne 1 ]; then exit 0; else exit 1; fi;
             )
